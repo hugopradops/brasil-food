@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+body {
+  padding-top: 80px; /* Adjust for the fixed header height */
+  background-color: #f8f9fa; /* Light background */
+  color: #212529; /* Dark text */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #f8f9fa; /* Green for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  height: 100px; /* Increased header height */
+  line-height: normal; /* Remove line-height to avoid misalignment */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Vertically center content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header h1 {
+  font-size: 2rem; /* Larger font size for the title */
+}
+
+header ul {
+  display: flex;
+  gap: 1.5rem; /* Adjust spacing between menu items */
+}
+
+header a {
+  color: #000; /* Set default text color to black */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+  font-size: 1rem; /* Ensure links are readable */
+}
+
+header a:hover {
+  color: #198754; /* Green text on hover */
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
