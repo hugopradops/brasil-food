@@ -1,0 +1,29 @@
+name: Push image to registry
+run-name: ${{ gitea.actor }} pushing to registry 🚀
+on: [push]
+
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: NPM Install and Next build 
+        run: |
+          npm install && npm run build
+
+      - name: Upload to assets to webdav
+        uses: bxb100/action-upload-webdav@v1
+        with:
+          webdav_address: http://webdav.62010810.xyz
+          webdav_username: ${{ secrets.WEBDAV_USER }}
+          webdav_password: ${{ secrets.WEBDAB_PASSWORD }}
+          webdav_upload_path: "/"
+          keep_structure: true
+          files: ./out/**
