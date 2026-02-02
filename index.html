@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brazilian Flavors - Discover authentic Brazilian food. Traditional recipes, fresh ingredients, and the taste of Brazil.">
+    <title>Brazilian Flavors | Authentic Brazilian Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">🇧🇷</span>
+                <span class="logo-text">Brazilian <span class="logo-highlight">Flavors</span></span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Welcome to</span>
+            <h1 class="hero-title">Brazilian Flavors</h1>
+            <p class="hero-description">
+                Experience the authentic taste of Brazil. From traditional feijoada to refreshing açaí bowls, 
+                we bring the vibrant flavors of Brazilian cuisine to your table.
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">
+                    <span>Explore Menu</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#about" class="btn btn-secondary">Learn Our Story</a>
+            </div>
+            <div class="hero-info">
+                <div class="hero-info-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>123 Flavor Street, Kitchener, ON</span>
+                </div>
+                <div class="hero-info-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>Open Daily: 11am - 10pm</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#menu" class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-arrow"></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Specialties</span>
+                <h2 class="section-title">Delicious Menu</h2>
+                <p class="section-description">Handcrafted dishes made with authentic Brazilian recipes and the freshest ingredients</p>
+            </div>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All Items</button>
+                <button class="category-btn" data-category="main">Main Dishes</button>
+                <button class="category-btn" data-category="snacks">Snacks</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Feijoada -->
+                <article class="menu-card" data-category="main">
+                    <div class="menu-card-image">
+                        <img src="images/tipica.png" alt="Feijoada - Traditional Brazilian black bean stew" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="view-btn" data-image="images/tipica.png" data-title="Feijoada">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path><path d="M11 8v6"></path><path d="M8 11h6"></path></svg>
+                            </button>
+                        </div>
+                        <span class="menu-card-badge popular">Popular</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Feijoada</h3>
+                            <span class="menu-card-price">$15.00</span>
+                        </div>
+                        <p class="menu-card-description">Traditional Brazilian black bean stew with pork, served with rice, collard greens, and orange slices</p>
+                        <div class="menu-card-tags">
+                            <span class="tag">Signature</span>
+                            <span class="tag">Gluten-Free</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Picanha -->
+                <article class="menu-card" data-category="main">
+                    <div class="menu-card-image">
+                        <img src="images/prato-feito.png" alt="Picanha - Brazilian grilled beef" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="view-btn" data-image="images/prato-feito.png" data-title="Picanha">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path><path d="M11 8v6"></path><path d="M8 11h6"></path></svg>
+                            </button>
+                        </div>
+                        <span class="menu-card-badge chef">Chef's Choice</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Picanha</h3>
+                            <span class="menu-card-price">$20.00</span>
+                        </div>
+                        <p class="menu-card-description">Premium Brazilian grilled beef cut, served with rice, farofa, and grilled vegetables</p>
+                        <div class="menu-card-tags">
+                            <span class="tag">Premium</span>
+                            <span class="tag">Grilled</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Pão de Queijo -->
+                <article class="menu-card" data-category="snacks">
+                    <div class="menu-card-image">
+                        <img src="images/pao-de-queijo.png" alt="Pão de Queijo - Brazilian cheese bread" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="view-btn" data-image="images/pao-de-queijo.png" data-title="Pão de Queijo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path><path d="M11 8v6"></path><path d="M8 11h6"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Pão de Queijo</h3>
+                            <span class="menu-card-price">$5.00</span>
+                        </div>
+                        <p class="menu-card-description">Warm, chewy Brazilian cheese bread made with tapioca flour and fresh cheese</p>
+                        <div class="menu-card-tags">
+                            <span class="tag">Vegetarian</span>
+                            <span class="tag">Gluten-Free</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Açaí -->
+                <article class="menu-card" data-category="desserts">
+                    <div class="menu-card-image">
+                        <img src="images/acai.jpg" alt="Açaí Bowl" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="view-btn" data-image="images/acai.jpg" data-title="Açaí Bowl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path><path d="M11 8v6"></path><path d="M8 11h6"></path></svg>
+                            </button>
+                        </div>
+                        <span class="menu-card-badge popular">Popular</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Açaí Bowl</h3>
+                            <span class="menu-card-price">$7.00</span>
+                        </div>
+                        <p class="menu-card-description">Refreshing açaí bowl topped with granola, banana, strawberries, and honey</p>
+                        <div class="menu-card-tags">
+                            <span class="tag">Vegan</span>
+                            <span class="tag">Healthy</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Brigadeiro -->
+                <article class="menu-card" data-category="desserts">
+                    <div class="menu-card-image">
+                        <img src="images/brigadeiro.png" alt="Brigadeiro - Brazilian chocolate truffle" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="view-btn" data-image="images/brigadeiro.png" data-title="Brigadeiro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path><path d="M11 8v6"></path><path d="M8 11h6"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Brigadeiro</h3>
+                            <span class="menu-card-price">$3.00</span>
+                        </div>
+                        <p class="menu-card-description">Traditional Brazilian chocolate truffle made with condensed milk and cocoa</p>
+                        <div class="menu-card-tags">
+                            <span class="tag">Sweet</span>
+                            <span class="tag">Vegetarian</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Guaraná -->
+                <article class="menu-card" data-category="drinks">
+                    <div class="menu-card-image">
+                        <img src="images/guarana.jpg" alt="Guaraná Antarctica" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="view-btn" data-image="images/guarana.jpg" data-title="Guaraná Antarctica">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path><path d="M11 8v6"></path><path d="M8 11h6"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Guaraná Antarctica</h3>
+                            <span class="menu-card-price">$2.50</span>
+                        </div>
+                        <p class="menu-card-description">Brazil's favorite soft drink with a unique, refreshing guaraná fruit flavor</p>
+                        <div class="menu-card-tags">
+                            <span class="tag">Refreshing</span>
+                            <span class="tag">Classic</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-subtitle">Our Story</span>
+                    <h2 class="section-title">A Taste of Brazil</h2>
+                    <p class="about-description">
+                        At Brazilian Flavors, we're passionate about bringing the authentic taste of Brazil to Canada. 
+                        Our journey began with a simple dream: to share the rich culinary traditions of our homeland 
+                        with our new community.
+                    </p>
+                    <p class="about-description">
+                        Every dish we serve is crafted with love, using traditional family recipes passed down through 
+                        generations. We source the finest ingredients to ensure each bite transports you to the vibrant 
+                        streets of São Paulo, the sunny beaches of Rio, and the heart of Brazilian hospitality.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 2v2"></path><path d="M12 22v-2"></path><path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path><path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path><path d="M14 12h8"></path><path d="M2 12h2"></path><path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path><path d="m17 3.34-1 1.73"></path><path d="m11 13.73-4 6.93"></path></svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Authentic Recipes</h4>
+                                <p>Traditional family recipes from Brazil</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.27 21.7s9.87-3.5 12.73-6.36a4.5 4.5 0 0 0-6.36-6.37C5.77 11.84 2.27 21.7 2.27 21.7zM8.64 14l-2.05-2.04M15.34 15l5.27-5.27"></path><path d="M22 9 12 2 9.5 6.5"></path></svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Fresh Ingredients</h4>
+                                <p>Quality ingredients, prepared daily</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Made with Love</h4>
+                                <p>Every dish crafted with passion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-gallery">
+                    <div class="gallery-item gallery-item-1">
+                        <img src="images/rio-de-janeiro.jpg" alt="Rio de Janeiro - Christ the Redeemer" loading="lazy">
+                    </div>
+                    <div class="gallery-item gallery-item-2">
+                        <img src="images/restaurante2.jpg" alt="Happy customers enjoying Brazilian food" loading="lazy">
+                    </div>
+                    <div class="gallery-item gallery-item-3">
+                        <img src="images/the-other.jpg" alt="Beautiful Brazilian landscape" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What People Say</span>
+                <h2 class="section-title">Customer Reviews</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">"The feijoada here is absolutely incredible! It reminds me of my grandmother's cooking back in São Paulo. A true taste of home."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <span class="author-name">Maria Rodriguez</span>
+                            <span class="author-title">Food Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">"Best açaí bowl in the city! Fresh, delicious, and the portions are generous. I come here at least twice a week."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div class="author-info">
+                            <span class="author-name">James Smith</span>
+                            <span class="author-title">Regular Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">"The atmosphere is warm and welcoming, and the staff treats you like family. The picanha is cooked to perfection!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AC</div>
+                        <div class="author-info">
+                            <span class="author-name">Ana Costa</span>
+                            <span class="author-title">Local Resident</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h2 class="section-title">Visit Us Today</h2>
+                    <p class="contact-description">We'd love to welcome you to Brazilian Flavors. Come experience the warmth of Brazilian hospitality!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Address</h4>
+                                <p>123 Flavor Street<br>Kitchener, ON, Canada</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>(519) 555-0123</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Hours</h4>
+                                <p>Mon - Sat: 11am - 10pm<br>Sunday: 12pm - 9pm</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>hello@brazilianflavors.ca</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="https://wa.me/15195550123" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <a href="https://www.google.com/maps?q=123+Flavor+Street,+Kitchener,+ON,+Canada" target="_blank" rel="noopener noreferrer" class="map-placeholder">
+                        <div class="map-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>View on Google Maps</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-icon">🇧🇷</span>
+                        <span class="logo-text">Brazilian <span class="logo-highlight">Flavors</span></span>
+                    </a>
+                    <p>Bringing the authentic taste of Brazil to Kitchener since 2020.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li>Mon - Sat: 11am - 10pm</li>
+                        <li>Sunday: 12pm - 9pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brazilian Flavors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="modal" id="image-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+            <img src="" alt="" class="modal-image" id="modal-image">
+            <p class="modal-title" id="modal-title"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
