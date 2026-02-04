@@ -2,7 +2,8 @@
 
 A beautiful, modern restaurant website showcasing authentic Brazilian cuisine. Built with pure HTML, CSS, and JavaScript - no frameworks or build tools required.
 
-![Brazilian Flavors](images/brazilian-food.jpg)
+<img width="1794" height="1317" alt="image" src="https://github.com/user-attachments/assets/dd50f82b-c926-4eeb-8318-65a2d84aa85d" />
+
 
 ## ✨ Features
 
