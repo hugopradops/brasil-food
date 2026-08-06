@@ -43,11 +43,7 @@ docker run --rm -p 8080:80 brasil-food
 
 Then visit `http://localhost:8080`.
 
-Images are published to GitHub Container Registry on every push to `main`:
-
-```bash
-docker pull ghcr.io/hugopradops/brasil-food:latest
-```
+The image is built in CI to verify the `Dockerfile`, but it is not published to any registry - build it locally if you want to run it.
 
 ## 📁 Project Structure
 
@@ -74,7 +70,7 @@ brasil-food/
 │       └── the-other.jpg       # About section
 ├── Dockerfile                  # nginx image for the static site
 ├── nginx.conf                  # gzip + cache headers
-├── .github/workflows/          # CI and Docker build pipelines
+├── .github/workflows/          # CI and Docker build checks
 └── README.md
 ```
 
