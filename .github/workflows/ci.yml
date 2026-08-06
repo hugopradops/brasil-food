@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check required files exist
+        run: |
+          for f in index.html assets/css/styles.css assets/js/script.js; do
+            test -f "$f" || { echo "Missing $f"; exit 1; }
+          done
+
+      - name: Check JavaScript syntax
+        run: node --check assets/js/script.js
+
+      - name: Check for broken asset references
+        run: |
+          missing=0
+          # Paths referenced from index.html are relative to the repo root
+          while IFS= read -r path; do
+            [ -z "$path" ] && continue
+            if [ ! -f "$path" ]; then
+              echo "index.html references a missing file: $path"
+              missing=1
+            fi
+          done < <(grep -oE '(src|href|data-image)="(assets|images)/[^"]+"' index.html | sed -E 's/.*"(.*)"/\1/' | sort -u)
+          # Paths in styles.css are relative to assets/css/
+          while IFS= read -r path; do
+            [ -z "$path" ] && continue
+            if [ ! -f "assets/css/$path" ]; then
+              echo "styles.css references a missing file: $path"
+              missing=1
+            fi
+          done < <(grep -oE "url\('[^']+'\)" assets/css/styles.css | sed -E "s/url\('(.*)'\)/\1/" | sort -u)
+          exit $missing

@@ -266,7 +266,7 @@ ul, ol {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('images/brazilian-food.jpg') center/cover no-repeat;
+    background: url('../images/brazilian-food.jpg') center/cover no-repeat;
     padding: calc(var(--header-height) + var(--spacing-2xl)) var(--spacing-lg) var(--spacing-2xl);
 }
 
@@ -937,7 +937,7 @@ ul, ol {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('images/rio-de-janeiro.jpg') center/cover no-repeat;
+    background: url('../images/rio-de-janeiro.jpg') center/cover no-repeat;
     opacity: 0.3;
 }
 

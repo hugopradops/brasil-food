@@ -4,7 +4,6 @@ A beautiful, modern restaurant website showcasing authentic Brazilian cuisine. B
 
 <img width="1794" height="1317" alt="image" src="https://github.com/user-attachments/assets/dd50f82b-c926-4eeb-8318-65a2d84aa85d" />
 
-
 ## ✨ Features
 
 - **Modern Design** - Clean, elegant UI with Brazilian-inspired color palette
@@ -35,24 +34,47 @@ php -S localhost:8000
 
 Then visit `http://localhost:8000` in your browser.
 
+### Docker
+
+```bash
+docker build -t brasil-food .
+docker run --rm -p 8080:80 brasil-food
+```
+
+Then visit `http://localhost:8080`.
+
+Images are published to GitHub Container Registry on every push to `main`:
+
+```bash
+docker pull ghcr.io/hugopradops/brasil-food:latest
+```
+
 ## 📁 Project Structure
 
 ```
 brasil-food/
-├── index.html      # Main HTML file
-├── styles.css      # All styling
-├── script.js       # Interactive functionality
-├── images/         # All images
-│   ├── brazilian-food.jpg   # Hero background
-│   ├── acai.jpg            # Menu item
-│   ├── brigadeiro.png      # Menu item
-│   ├── feijoada.png        # Menu item (tipica.png)
-│   ├── guarana.jpg         # Menu item
-│   ├── pao-de-queijo.png   # Menu item
-│   ├── prato-feito.png     # Menu item (Picanha)
-│   ├── restaurante2.jpg    # About section
-│   ├── rio-de-janeiro.jpg  # About section
-│   └── the-other.jpg       # About section
+├── index.html                  # Main HTML file
+├── favicon.svg                 # Favicon
+├── apple-touch-icon.svg        # iOS home screen icon
+├── assets/
+│   ├── css/
+│   │   └── styles.css          # All styling
+│   ├── js/
+│   │   └── script.js           # Interactive functionality
+│   └── images/
+│       ├── brazilian-food.jpg  # Hero background
+│       ├── acai.jpg            # Menu item
+│       ├── brigadeiro.png      # Menu item
+│       ├── guarana.jpg         # Menu item
+│       ├── pao-de-queijo.png   # Menu item
+│       ├── prato-feito.png     # Menu item (Picanha)
+│       ├── tipica.png          # Menu item (Feijoada)
+│       ├── restaurante2.jpg    # About section
+│       ├── rio-de-janeiro.jpg  # About section
+│       └── the-other.jpg       # About section
+├── Dockerfile                  # nginx image for the static site
+├── nginx.conf                  # gzip + cache headers
+├── .github/workflows/          # CI and Docker build pipelines
 └── README.md
 ```
 
